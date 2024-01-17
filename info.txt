@@ -1,0 +1,40 @@
+DB data insert in ./config/debug.yaml
+
+Add people http://address/add
+    post:
+        {
+           "name": "Dmitriy",
+           "surname": "Ushakov",
+           "patronymic": "Vasilevich" // необязательно
+        }
+
+Del people http://address/del
+    post:
+        {
+            "id": 1
+        }
+
+Get people:
+    by id: localhost:8000/searchbyid
+        post:
+            {
+                "id": 4
+            }
+    by fname and lname: localhost:8000/searchbyname
+            post:
+                {
+                    "name": "Ilya",
+                    "surname": "Pupkin"
+                }
+
+Edit people:
+    by id: localhost:8000/editbyid
+            post:
+                {
+                    "id": 7, # needed person id
+                    "name": "Ivan", # NEW DATA
+                    "surname": "Blobchik", # NEW DATA
+                    "country": "US", # NEW DATA
+                    "gender": "male", # NEW DATA
+                    "age": 50 # NEW DATA
+                }

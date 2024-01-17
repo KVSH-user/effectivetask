@@ -1,0 +1,5 @@
+if u need create migration:
+goose -dir migrations create #migration_name sql
+
+if u need migrate:
+goose -dir migrations postgres "user=postgres dbname=postgres sslmode=disable" up
